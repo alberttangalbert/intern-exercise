@@ -128,7 +128,7 @@ python-dotenv>=1.0.0
 - `cache/task_1/trial_product_breakdown.csv` - wide-format trial-level table
 - `cache/task_1/product_id_master_by_did.json` - drug master index (keyed by `did`)
 
-**Cost**: ~$4.40 for 184 trials (~$0.024/trial)
+**Cost**: $4.40 for 184 trials ($0.024/trial)
 
 ### Stage 2: Innovation Classification (Task 2)
 **Purpose**: Classify investigational drugs as Innovative, Generic, or Biosimilar
@@ -141,7 +141,7 @@ python-dotenv>=1.0.0
 **Key Outputs**:
 - `cache/task_2/trial_investigational_drugs_classifications.csv`
 
-**Cost**: ~$1.88 for 179 trials with investigational products (~$0.011/trial)
+**Cost**: $1.88 for 179 trials with investigational products ($0.011/trial)
 
 ### Stage 3: Mechanism of Action Identification (Task 3)
 
