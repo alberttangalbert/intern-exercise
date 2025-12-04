@@ -1,6 +1,6 @@
 # intern-exercise
 
-A comprehensive Python-based pipeline for extracting, classifying, and analyzing clinical trial drug mechanisms using large language models (LLMs) and the MeSH (Medical Subject Headings) taxonomy.
+A Python-based pipeline for extracting, classifying, and analyzing clinical trial drug mechanisms using large language models and the MeSH (Medical Subject Headings) taxonomy.
 
 ## Overview
 
@@ -283,12 +283,13 @@ The wrapper returns a dictionary with:
 ## Key Design Decisions
 
 ### 1. Deterministic Identifiers
-- `trial_hash` = MD5(title + start_date + phase) for stable trial IDs
-- `did_*` = MD5(composite key) for unique drug IDs across the dataset
+- trial hashes
+   - `tid_*` = MD5(title + start_date + phase) for stable trial IDs
+- drug hashes
+   - `did_*` = MD5(composite key) for unique drug IDs across the dataset
 
 ### 2. LLM Prompt Engineering
 - **Strict output format validation**: JSON schema enforcement
-- **Copyright compliance**: Hard 15-word quote limit, 1 quote/source max
 - **Coverage checks**: Verify all drugs classified before saving results
 - **Fallback mechanisms**: LLM-refined search terms if initial PubMed queries fail
 
